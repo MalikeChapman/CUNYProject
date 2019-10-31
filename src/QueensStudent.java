@@ -1,7 +1,12 @@
 public class QueensStudent extends CUNY {
     private String semesterEntered;
+    private String semester;
+    private String year;
     private String major;
-    private float gpa;
+    private String address;
+    private String allClasses;
+
+
 
     public String getSemesterEntered() {
         return semesterEntered;
@@ -9,6 +14,42 @@ public class QueensStudent extends CUNY {
 
     public void setSemesterEntered(String semesterEntered) {
         this.semesterEntered = semesterEntered;
+    }
+
+    public String getSemester() {
+        return semester;
+    }
+
+    public void setSemester(String semester) {
+        this.semester = semester;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getAllClasses() {
+        return allClasses;
+    }
+
+    public void setAllClasses(String allClasses) {
+        this.allClasses = allClasses;
+    }
+
+    public void setSemesterEntered(String semester, String year) {
+        this.semesterEntered = String.format("Semester entered is: %1$s %1$s." + semester, year);
     }
 
     public String getMajor() {
@@ -19,17 +60,5 @@ public class QueensStudent extends CUNY {
         this.major = major;
     }
 
-    public float getGpa() {
-        return gpa;
-    }
 
-    public void setGpa(float gpa) {
-        if (gpa < 0.0 || gpa > 4)
-        {
-            System.out.println("Invalid gpa, gpa set to 0.0");
-            this.gpa = 0.0f;
-        }
-        else
-            this.gpa = gpa;
-    }
 }
