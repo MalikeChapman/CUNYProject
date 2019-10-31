@@ -1,25 +1,22 @@
 public class QueensUndergraduate extends CUNY {
-    private String address;
-    private boolean dorm;
     private String standing;
     private String myClasses;
     private double grade;
 
-
-    public String getAddress() {
-        return address;
+    public String getMyClasses() {
+        return myClasses;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setMyClasses(String myClasses) {
+        this.myClasses = myClasses;
     }
 
-    public boolean isDorm() {
-        return dorm;
+    public double getGrade() {
+        return grade;
     }
 
-    public void setDorm(boolean dorm) {
-        this.dorm = dorm;
+    public void setGrade(double grade) {
+        this.grade = grade;
     }
 
     public String getStanding() {
