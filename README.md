@@ -1,0 +1,3 @@
+# CUNYProject
+Hello, this is just a small project i'm trying to work on that allows the user to upload and download notes and previous tests to/from a database.
+Users would need to sign up and add information like classes, professors, majors, etc...
