@@ -14,7 +14,7 @@ class RegGUI extends JFrame {
     private JLabel level;
     private JLabel password;
     private JPasswordField passwordInput;
-    //private JComboBox levels;
+    private JComboBox<String> levels;
     private JLabel email;
     private JTextField emailInput;
     private JCheckBox term;
@@ -28,8 +28,8 @@ class RegGUI extends JFrame {
     public RegGUI() {
 
         setTitle("Student Registration");
-        setSize(300, 600);
-        setLocation(400, 200);
+        setSize(300, 400);
+        setLocation(420, 220);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
 
@@ -51,7 +51,7 @@ class RegGUI extends JFrame {
         nameInput = new JTextField();
         nameInput.setFont(new Font("Arial", Font.PLAIN, 12));
         nameInput.setSize(150, 20);
-        nameInput.setLocation(100, 100);
+        nameInput.setLocation(110, 100);
         reg.add(nameInput);
 
         major = new JLabel("Major: ");
@@ -63,7 +63,7 @@ class RegGUI extends JFrame {
         majorInput = new JTextField();
         majorInput.setFont(new Font("Arial", Font.PLAIN, 12));
         majorInput.setSize(150, 20);
-        majorInput.setLocation(100, 120);
+        majorInput.setLocation(110, 120);
         reg.add(majorInput);
 
         email = new JLabel("Email: ");
@@ -75,7 +75,7 @@ class RegGUI extends JFrame {
         emailInput = new JTextField();
         emailInput.setFont(new Font("Arial", Font.PLAIN, 12));
         emailInput.setSize(150, 20);
-        emailInput.setLocation(100, 140);
+        emailInput.setLocation(110, 140);
         reg.add(emailInput);
 
         level = new JLabel("Current Year: ");
@@ -84,11 +84,13 @@ class RegGUI extends JFrame {
         level.setLocation(30, 160);
         reg.add(level);
 
-        /*
-         * levels = new JComboBox(levelsNames); levels.setFont(new Font("Arial",
-         * Font.PLAIN, 15)); levels.setSize(100, 20); levels.setLocation(250, 250);
-         * reg.add(levels);
-         */
+        
+         levels = new JComboBox<String>(levelsNames); 
+         levels.setFont(new Font("Arial", Font.PLAIN, 12)); 
+         levels.setSize(100, 20); 
+         levels.setLocation(110, 160);
+         reg.add(levels);
+         
 
         gpa = new JLabel("GPA: ");
         gpa.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -99,19 +101,19 @@ class RegGUI extends JFrame {
         gpaInput = new JTextField();
         gpaInput.setFont(new Font("Arial", Font.PLAIN, 12));
         gpaInput.setSize(150, 20);
-        gpaInput.setLocation(100, 180);
+        gpaInput.setLocation(110, 180);
         reg.add(gpaInput);
 
         password = new JLabel("Password: ");
         password.setFont(new Font("Arial", Font.PLAIN, 12));
         password.setSize(120, 20);
-        password.setLocation(20, 200);
+        password.setLocation(30, 200);
         reg.add(password);
 
         passwordInput = new JPasswordField();
         passwordInput.setFont(new Font("Arial", Font.PLAIN, 12));
         passwordInput.setSize(150, 20);
-        passwordInput.setLocation(100, 200);
+        passwordInput.setLocation(110, 200);
         passwordInput.setEchoChar('*');
         reg.add(passwordInput);
 
