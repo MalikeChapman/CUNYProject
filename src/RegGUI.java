@@ -4,7 +4,7 @@ import java.awt.*;
 class RegGUI extends JFrame {
 
     private Container reg;
-    private JLabel title;
+    private JLabel heading;
     private JLabel name;
     private JTextField nameInput;
     private JLabel major;
@@ -12,6 +12,8 @@ class RegGUI extends JFrame {
     private JTextField gpaInput;
     private JTextField majorInput;
     private JLabel level;
+    private JLabel password;
+    private JPasswordField passwordInput;
     //private JComboBox levels;
     private JLabel email;
     private JTextField emailInput;
@@ -34,13 +36,13 @@ class RegGUI extends JFrame {
         reg = getContentPane();
         reg.setLayout(null);
 
-        title = new JLabel("Student Registration");
-        title.setFont(new Font("Arial", Font.PLAIN, 16));
-        title.setSize(60, 30);
-        title.setLocation(60, 20);
-        reg.add(title);
+        heading = new JLabel("Student Registration");
+        heading.setFont(new Font("Arial", Font.PLAIN, 16));
+        heading.setSize(250, 30);
+        heading.setLocation(60, 20);
+        reg.add(heading);
 
-        name = new JLabel("Name");
+        name = new JLabel("Name: ");
         name.setFont(new Font("Arial", Font.PLAIN, 12));
         name.setSize(120, 20);
         name.setLocation(30, 100);
@@ -54,32 +56,32 @@ class RegGUI extends JFrame {
 
         major = new JLabel("Major: ");
         major.setFont(new Font("Arial", Font.PLAIN, 12));
-        major.setSize(100, 20);
-        major.setLocation(100, 150);
+        major.setSize(120, 20);
+        major.setLocation(30, 120);
         reg.add(major);
 
         majorInput = new JTextField();
         majorInput.setFont(new Font("Arial", Font.PLAIN, 12));
         majorInput.setSize(150, 20);
-        majorInput.setLocation(200, 150);
+        majorInput.setLocation(100, 120);
         reg.add(majorInput);
 
-        email = new JLabel("email: ");
+        email = new JLabel("Email: ");
         email.setFont(new Font("Arial", Font.PLAIN, 12));
-        email.setSize(100, 20);
-        email.setLocation(100, 150);
+        email.setSize(120, 20);
+        email.setLocation(30, 140);
         reg.add(email);
 
         emailInput = new JTextField();
         emailInput.setFont(new Font("Arial", Font.PLAIN, 12));
         emailInput.setSize(150, 20);
-        emailInput.setLocation(200, 150);
+        emailInput.setLocation(100, 140);
         reg.add(emailInput);
 
-        level = new JLabel("Current Year");
+        level = new JLabel("Current Year: ");
         level.setFont(new Font("Arial", Font.PLAIN, 12));
-        level.setSize(100, 20);
-        level.setLocation(100, 200);
+        level.setSize(120, 20);
+        level.setLocation(30, 160);
         reg.add(level);
 
         /*
@@ -90,26 +92,39 @@ class RegGUI extends JFrame {
 
         gpa = new JLabel("GPA: ");
         gpa.setFont(new Font("Arial", Font.PLAIN, 12));
-        gpa.setSize(100, 20);
-        gpa.setLocation(100, 300);
+        gpa.setSize(120, 20);
+        gpa.setLocation(30, 180);
         reg.add(gpa);
 
         gpaInput = new JTextField();
         gpaInput.setFont(new Font("Arial", Font.PLAIN, 12));
-        gpaInput.setSize(200, 75);
-        gpaInput.setLocation(200, 300);
+        gpaInput.setSize(150, 20);
+        gpaInput.setLocation(100, 180);
         reg.add(gpaInput);
+
+        password = new JLabel("Password: ");
+        password.setFont(new Font("Arial", Font.PLAIN, 12));
+        password.setSize(120, 20);
+        password.setLocation(20, 200);
+        reg.add(password);
+
+        passwordInput = new JPasswordField();
+        passwordInput.setFont(new Font("Arial", Font.PLAIN, 12));
+        passwordInput.setSize(150, 20);
+        passwordInput.setLocation(100, 200);
+        passwordInput.setEchoChar('*');
+        reg.add(passwordInput);
 
         term = new JCheckBox("Accept Terms And Conditions.");
         term.setFont(new Font("Arial", Font.PLAIN, 12));
         term.setSize(250, 20);
-        term.setLocation(150, 400);
+        term.setLocation(60, 240);
         reg.add(term);
 
         sub = new JButton("Submit");
         sub.setFont(new Font("Arial", Font.PLAIN, 12));
         sub.setSize(100, 20);
-        sub.setLocation(150, 450);
+        sub.setLocation(90, 280);
         reg.add(sub);
 
         setVisible(true);
