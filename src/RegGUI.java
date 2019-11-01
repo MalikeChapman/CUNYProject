@@ -15,51 +15,51 @@ class RegGUI
         private JTextField nameInput;
         private JLabel major;
         private JLabel gpa;
-        provate JTextField gpaInput;
-    private JTextField majorInput;
-    private JLabel level;
-    private JRadioButton freshman;
-    private JRadioButton sophomore;
+        private JTextField gpaInput;
+        private JTextField majorInput;
+        private JLabel level;
+        private JRadioButton freshman;
+        private JRadioButton sophomore;
         private JRadioButton junior;
         private JRadioButton senior;
-    private ButtonGroup levels;
-    private JLabel email;
+        private ButtonGroup levels;
+        private JLabel email;
         private JTextField emailInput;
-    private JCheckBox term;
-    private JButton sub;
-    private JButton reset;
-    private JLabel res;
-    private JTextArea resadd;
+        private JCheckBox term;
+        private JButton sub;
+        private JButton reset;
+        private JLabel res;
+        private JTextArea resadd;
 
     // constructor, to initialize the components
     // with default values.
         public RegGUI(){
 
-    setTitle("Student Registration");
-    setBounds(300, 90, 900, 600);
-    setDefaultCloseOperation(EXIT_ON_CLOSE);
-    setResizable(false);
+            setTitle("Student Registration");
+            setBounds(300, 90, 900, 600);
+            setDefaultCloseOperation(EXIT_ON_CLOSE);
+            setResizable(false);
 
             reg = getContentPane();
             reg.setLayout(null);
 
             title = new JLabel("Student Registration");
-    title.setFont(new Font("Arial", Font.PLAIN, 30));
-    title.setSize(300, 30);
-    title.setLocation(300, 30);
-    reg.add(title);
+            title.setFont(new Font("Arial", Font.PLAIN, 30));
+            title.setSize(300, 30);
+            title.setLocation(300, 30);
+            reg.add(title);
 
-   name = new JLabel("Name");
-    name.setFont(new Font("Arial", Font.PLAIN, 20));
-    name.setSize(100, 20);
-    name.setLocation(100, 100);
-    reg.add(name);
+            name = new JLabel("Name");
+            name.setFont(new Font("Arial", Font.PLAIN, 20));
+            name.setSize(100, 20);
+            name.setLocation(100, 100);
+            reg.add(name);
 
-    tname = new JTextField();
-    tname.setFont(new Font("Arial", Font.PLAIN, 15));
-    tname.setSize(190, 20);
-    tname.setLocation(200, 100);
-    reg.add(tname);
+            nameInput = new JTextField();
+            nameInput.setFont(new Font("Arial", Font.PLAIN, 15));
+            nameInput.setSize(190, 20);
+            nameInput.setLocation(200, 100);
+            reg.add(nameInput);
 
     name = new JLabel("Name: ");
     name.setFont(new Font("Arial", Font.PLAIN, 20));
@@ -86,13 +86,27 @@ class RegGUI
     freshman.setLocation(200, 200);
     reg.add(male);
 
-    sohpomore = new JRadioButton("Sophomore");
+    sophomore = new JRadioButton("Sophomore");
     sophomore.setFont(new Font("Arial", Font.PLAIN, 15));
     sophomore.setSelected(false);
     sophomore.setSize(80, 20);
     sophomore.setLocation(275, 200);
     reg.add(sophomore);
-      
+
+    junior = new JRadioButton("Junior");
+    junior.setFont(new Font("Arial", Font.PLAIN, 15));
+    junior.setSelected(false);
+    junior.setSize(120, 20);
+    junior.setLocation(275, 200);
+    reg.add(junior);
+
+    senior = new JRadioButton("Senior");
+    senior.setFont(new Font("Arial", Font.PLAIN, 15));
+    senior.setSelected(false);
+    senior.setSize(140, 20);
+    senior.setLocation(275, 200);
+    reg.add(senior);
+
             gengp = new ButtonGroup();
             gengp.add(male);
             gengp.add(female);
