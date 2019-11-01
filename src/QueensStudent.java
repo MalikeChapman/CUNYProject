@@ -5,6 +5,8 @@ public class QueensStudent extends CUNY {
     private String major;
     private String address;
     private String allClasses;
+    private String password;
+    private int studentID;
 
 
 
