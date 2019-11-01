@@ -148,51 +148,20 @@ class RegGUI
     // to get the action performed
     // by the user and act accordingly
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == sub) {
-            if (term.isSelected()) {
-                String data1;
-                String data
-                        = "Name : "
-                        + nameInput.getText() + "\n"
-                        + "Mobile : "
-                        + majorInput.getText() + "\n";
-                if (male.isSelected())
-                    data1 = "Gender : Male"
-                            + "\n";
-                else
-                    data1 = "Gender : Female"
-                            + "\n";
-                String data2
-                        = "DOB : "
-                        + (String) date.getSelectedItem()
-                        + "/" + (String) month.getSelectedItem()
-                        + "/" + (String) year.getSelectedItem()
-                        + "\n";
-                String data3 = "Address : " + tadd.getText();
-                tout.setText(data + data1 + data2 + data3);
-                tout.setEditable(false);
-                res.setText("Registration Successfully..");
-            } else {
-                tout.setText("");
+        throw new IllegalArgumentException("Please Accept The Terms and Conditions");
                 resadd.setText("");
-                res.setText("Please accept the"
-                        + " terms & conditions..");
-            }
 
-if (e.getSource() == reset) {
+        if (e.getSource() == reset) {
                 String def = "";
-                tname.setText(def);
-                tadd.setText(def);
-                tmno.setText(def);
+            majorInput.setText(def);
+            gpaInput.setText(def);
+            nameInput.setText(def);
+            emailInput.setText(def);
                 res.setText(def);
-                tout.setText(def);
                 term.setSelected(false);
-                date.setSelectedIndex(0);
-                month.setSelectedIndex(0);
-                year.setSelectedIndex(0);
+            levels.setSelectedIndex(0);
                 resadd.setText(def);
             }
-        }
     }
 }
 
