@@ -105,7 +105,6 @@ class RegGUI
         gpaInput.setFont(new Font("Arial", Font.PLAIN, 15));
         gpaInput.setSize(200, 75);
         gpaInput.setLocation(200, 300);
-        gpaInput.setLineWrap(true);
         reg.add(gpaInput);
 
         term = new JCheckBox("Accept Terms And Conditions.");
