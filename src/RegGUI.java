@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 class RegGUI extends JFrame {
 
@@ -84,13 +86,13 @@ class RegGUI extends JFrame {
         level.setLocation(30, 160);
         reg.add(level);
 
-        
-         levels = new JComboBox<String>(levelsNames); 
-         levels.setFont(new Font("Arial", Font.PLAIN, 12)); 
-         levels.setSize(100, 20); 
-         levels.setLocation(110, 160);
-         reg.add(levels);
-         
+
+        levels = new JComboBox<String>(levelsNames);
+        levels.setFont(new Font("Arial", Font.PLAIN, 12));
+        levels.setSize(100, 20);
+        levels.setLocation(110, 160);
+        reg.add(levels);
+
 
         gpa = new JLabel("GPA: ");
         gpa.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -98,7 +100,7 @@ class RegGUI extends JFrame {
         gpa.setLocation(30, 180);
         reg.add(gpa);
 
-        gpaInput = new JTextField();
+        gpaInput = new JFormattedTextField(get);
         gpaInput.setFont(new Font("Arial", Font.PLAIN, 12));
         gpaInput.setSize(150, 20);
         gpaInput.setLocation(110, 180);
@@ -127,9 +129,41 @@ class RegGUI extends JFrame {
         sub.setFont(new Font("Arial", Font.PLAIN, 12));
         sub.setSize(100, 20);
         sub.setLocation(90, 280);
+        sub.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                subActionPerformed(e);
+                System.exit(0);
+            }
+
+            ;
+        });
         reg.add(sub);
 
         setVisible(true);
+    }
+
+    @SuppressWarnings("deprecation")
+    private void subActionPerformed(ActionEvent e) {
+        String sname, sgpa, syear, spassword, smajor, semail;
+
+        if (term.isSelected()) {
+            sname = nameInput.getText();
+            sgpa = gpaInput.getText();
+            syear = (String) levels.getSelectedItem();
+            smajor = majorInput.getText();
+            spassword = passwordInput.getText();
+            semail = emailInput.getText();
+        } else {
+            throw new IllegalArgumentException("Please Agree to terms!");
+        }
+
+        System.out.println(sname);
+        System.out.println(sgpa);
+        System.out.println(syear);
+        System.out.println(smajor);
+        System.out.println(spassword);
+
+
     }
 
 }
