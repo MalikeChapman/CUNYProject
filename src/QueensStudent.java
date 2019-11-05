@@ -1,18 +1,18 @@
 import java.util.regex.*;
 public class QueensStudent extends CUNY {
     private String semesterEntered;
-    private String Studentemester;
-    private String Studentyear;
-    private String Studentmajor;
-    private String Studentaddress;
+    private String StudentName;
+    private String StudentYear;
+    private String StudentMajor;
+    private String StudentAddress;
     private String allClasses;
     private String password;
     private int studentID;
     private String emailRegEx;
-    private String Studentemail;
+    private String StudentEmail;
     private String passwordRegEX;
-    privage String
-    StudentName;
+
+}
 
     public String getPasswordRegEX() {
         return passwordRegEX;

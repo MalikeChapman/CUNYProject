@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 
 class RegGUI extends JFrame {
 
@@ -21,6 +22,8 @@ class RegGUI extends JFrame {
     private JTextField emailInput;
     private JCheckBox term;
     private JButton sub;
+    private static int length = 0;
+    private ArrayList<Integer> students;
     // private JButton reset;
     // private JLabel res;
     // private JTextArea resadd;
@@ -100,7 +103,7 @@ class RegGUI extends JFrame {
         gpa.setLocation(30, 180);
         reg.add(gpa);
 
-        gpaInput = new JFormattedTextField(get);
+        gpaInput = new JFormattedTextField();
         gpaInput.setFont(new Font("Arial", Font.PLAIN, 12));
         gpaInput.setSize(150, 20);
         gpaInput.setLocation(110, 180);
@@ -144,26 +147,20 @@ class RegGUI extends JFrame {
 
     @SuppressWarnings("deprecation")
     private void subActionPerformed(ActionEvent e) {
-        String sname, sgpa, syear, spassword, smajor, semail;
-
+        students = new ArrayList<Integer>();
+        students.add(length);
+        students.get(length) = new QueensStudent();
         if (term.isSelected()) {
-            sname = nameInput.getText();
-            sgpa = gpaInput.getText();
-            syear = (String) levels.getSelectedItem();
-            smajor = majorInput.getText();
-            spassword = passwordInput.getText();
-            semail = emailInput.getText();
+            // students.get(length).setName = nameInput.getText();
+            //students.get(length).StudentGPA = gpaInput.getText();
+            //students.get(length).StudentYear = (String) levels.getSelectedItem();
+            //students.get(length).StudentMajor = majorInput.getText();
+            students.get(length).setPassword(passwordInput.getText());
+            students.get(length).setEmail(emailInput.getText());
+            length++;
         } else {
             throw new IllegalArgumentException("Please Agree to terms!");
         }
-
-        System.out.println(sname);
-        System.out.println(sgpa);
-        System.out.println(syear);
-        System.out.println(smajor);
-        System.out.println(spassword);
-
-
     }
 
 }
